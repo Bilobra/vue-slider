@@ -7,3 +7,12 @@ const slides = [
 	'./img/04.jpg',
 	'./img/05.jpg',
 ]
+
+
+const app = new Vue({
+	el: '#root',
+
+	data:{
+		slides,
+	},
+})
