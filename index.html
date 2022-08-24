@@ -21,10 +21,12 @@
         <div class="slider">
   
           <ul class="slides-wrapper">
-            <li v-for="(element,index) in slides" 
-              v-bind:class ="classeActive" class="slide">
+            <li v-for="(slide,index) in slides" 
+              v-bind:class = "index === currentIndex ? 'active' : '' " class="slide">
+              <!-- contenuto variabile slide: {{slide}} <br>
+              contenuto variabile index: {{index}} <hr> -->
               <img 
-                :src="slides[index]" 
+                :src="slide"
                 alt="">
             </li>
             <!-- <li class="slide">
@@ -42,10 +44,10 @@
           </ul>
   
           <div class="arrows">
-            <p @click="goNext" class="arrow-prev">
+            <p @click="goPrev" class="arrow-prev">
               <i class="fa-solid fa-chevron-left"></i>
             </p>
-            <p class="arrow-next">
+            <p @click="goNext" class="arrow-next">
               <i class="fa-solid fa-chevron-right"></i>
             </p>
           </div>

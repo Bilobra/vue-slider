@@ -14,15 +14,24 @@ const app = new Vue({
 
 	data:{
 		slides,
-		classeActive : 'active'
+		
+		currentIndex: 0,
 	},
 
 	methods: {
 		goNext(){
-			this.index.classList.remove('active')
-			this.index++
-			this.index.classList.add('active')
+			
+			this.currentIndex++
+			if(this.currentIndex === slides.length){
+				this.currentIndex = 0
+			}
 
+		},
+		goPrev(){
+			this.currentIndex--
+			if(this.currentIndex < 0){
+				this.currentIndex = slides.length - 1
+			}
 		}
 	},
 })
