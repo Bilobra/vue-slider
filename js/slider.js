@@ -16,6 +16,15 @@ const app = new Vue({
 		slides,
 		classeActive : 'active'
 	},
+
+	methods: {
+		goNext(){
+			this.index.classList.remove('active')
+			this.index++
+			this.index.classList.add('active')
+
+		}
+	},
 })
 
 
