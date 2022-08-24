@@ -22,7 +22,7 @@
   
           <ul class="slides-wrapper">
             <li v-for="(element,index) in slides" 
-              class="slide active">
+              v-bind:class ="classeActive" class="slide">
               <img 
                 :src="slides[index]" 
                 alt="">

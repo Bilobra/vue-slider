@@ -14,5 +14,12 @@ const app = new Vue({
 
 	data:{
 		slides,
+		classeActive : 'active'
 	},
 })
+
+
+// bind classe active
+
+// funzione che al click ,
+// la classe active si aggiunge all'index ++
